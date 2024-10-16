@@ -22,6 +22,13 @@ class _HomePageState extends State<HomePage> {
       'Jacket',
     ];
 
+    List<String> images = [
+      "https://media.istockphoto.com/id/1350560575/photo/pair-of-blue-running-sneakers-on-white-background-isolated.jpg?s=612x612&w=0&k=20&c=A3w_a9q3Gz-tWkQL6K00xu7UHdN5LLZefzPDp-wNkSU=",
+      "https://t3.ftcdn.net/jpg/06/12/00/18/360_F_612001823_TkzT0xmIgagoDCyQ0yuJYEGu8j6VNVYT.jpg",
+      "https://0.kixify.com/sites/default/files/imagecache/product_full/product/2022/10/18/p_34349063_198158656_2661011.jpg",
+      "https://di2ponv0v5otw.cloudfront.net/posts/2022/07/08/62c86ae9bd66cd3c8dff9861/m_62c86b0093649f082301c8b0.jpg"
+    ];
+
     List<String> status = [
       'All',
       'Newest',
@@ -146,10 +153,10 @@ class _HomePageState extends State<HomePage> {
                         ),
                         itemCount: 10,
                         itemBuilder: (context, index) {
-                          return const Card(
+                          return Card(
                             elevation: 2,
                             color: Colors.grey,
-                            child: SizedBox(height: 200, width: 200),
+                            child: Image(image: NetworkImage(images[index % 4]), fit: BoxFit.cover),
                           );
                         },
                       ),

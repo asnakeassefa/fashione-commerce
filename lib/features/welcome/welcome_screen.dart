@@ -57,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
           CustomButton(
             btnText: 'Let\'s Get started',
             onPressed: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
@@ -104,7 +104,10 @@ class WelcomeScreen extends StatelessWidget {
           Container(
             width: MediaQuery.sizeOf(context).width * 0.45,
             height: MediaQuery.sizeOf(context).height * 0.50,
+            
             decoration: const BoxDecoration(
+              image: DecorationImage(image: NetworkImage("https://thumbs.dreamstime.com/b/fashion-pretty-cool-youngwith-shopping-bags-wearing-black-hat-white-pants-over-colorful-orange-background-79063329.jpg"),
+              fit: BoxFit.cover),
               color: Colors.grey,
               borderRadius: BorderRadius.horizontal(
                   left: Radius.circular(100), right: Radius.circular(100)),
@@ -117,6 +120,8 @@ class WelcomeScreen extends StatelessWidget {
                 width: MediaQuery.sizeOf(context).width * 0.45,
                 height: MediaQuery.sizeOf(context).height * 0.27,
                 decoration: const BoxDecoration(
+                  image: DecorationImage(image: NetworkImage("https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?cs=srgb&dl=pexels-jmendezrf-1536619.jpg&fm=jpg"),
+              fit: BoxFit.cover),
                   color: Colors.grey,
                   borderRadius: BorderRadius.horizontal(
                       left: Radius.circular(100), right: Radius.circular(100)),
@@ -126,6 +131,8 @@ class WelcomeScreen extends StatelessWidget {
                 width: MediaQuery.sizeOf(context).width * 0.45,
                 height: MediaQuery.sizeOf(context).height * 0.22,
                 decoration: const BoxDecoration(
+                  image: DecorationImage(image: NetworkImage("https://images.unsplash.com/photo-1483985988355-763728e1935b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D"),
+              fit: BoxFit.cover),
                   color: Colors.grey,
                   borderRadius: BorderRadius.horizontal(
                       left: Radius.circular(100), right: Radius.circular(100)),
